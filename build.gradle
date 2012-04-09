@@ -1,0 +1,23 @@
+apply plugin: 'scala'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+group = 'info.schleichardt'
+version = '0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Libraries needed to run the scala tools
+    scalaTools 'org.scala-lang:scala-compiler:2.9.1'
+    scalaTools 'org.scala-lang:scala-library:2.9.1'
+
+    // Libraries needed for scala api
+    compile 'org.scala-lang:scala-library:2.9.1'
+
+    runtime 'commons-lang:commons-lang:2.6'
+    runtime 'commons-io:commons-io:2.1'
+}
