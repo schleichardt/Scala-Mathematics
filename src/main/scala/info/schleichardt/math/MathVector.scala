@@ -43,4 +43,11 @@ class MathVector(val content: Seq[Double]) {
 //TODO beliebige Länge
     MathVector(content(0) * other, content(1) * other, content(2) * other)
   }
+
+  override def equals(that: Any) = {
+    that match {
+      case other: MathVector => content.equals(other.content)
+      case _ => false
+    }
+  }
 }

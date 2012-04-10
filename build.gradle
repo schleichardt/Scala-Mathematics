@@ -21,7 +21,9 @@ dependencies {
     // Libraries needed for scala api
     compile 'org.scala-lang:scala-library:' + project.ext.scalaVersion
 
+    testCompile 'junit:junit:4.10'
     testCompile 'org.scala-tools.testing:specs_' + project.ext.scalaVersion + ':1.6.9'
+    testCompile 'org.scalatest:scalatest_' + project.ext.scalaVersion + ':1.7.1'
 
     runtime 'commons-lang:commons-lang:2.6'
     runtime 'commons-io:commons-io:2.1'
