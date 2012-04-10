@@ -2,6 +2,12 @@ package info.schleichardt.math
 
 import math._
 
+object MathVector {
+  def apply(one: Double, two: Double, three: Double) = {
+    new MathVector(Seq(one, two, three))
+  }
+}
+
 class MathVector(val content: Seq[Double]) {
   def length() = content.length
 
@@ -25,11 +31,16 @@ class MathVector(val content: Seq[Double]) {
     val row1 = content(1) * other.content(2) - content(2) * other.content(1)
     val row2 = content(2) * other.content(0) - content(0) * other.content(2)
     val row3 = content(0) * other.content(1) - content(1) * other.content(0)
-    new MathVector(Seq(row1, row2, row3))
+    MathVector(row1, row2, row3)
   }
 
   def *(other: MathVector)= {
     require(length == other.length, "length matches")
     content(0) * other.content(0) + content(1) * other.content(1) + content(2) * other.content(2)
+  }
+
+  def *(other: Double) = {
+//TODO beliebige Länge
+    MathVector(content(0) * other, content(1) * other, content(2) * other)
   }
 }
