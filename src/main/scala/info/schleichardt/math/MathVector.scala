@@ -1,10 +1,11 @@
 package info.schleichardt.math
 
 import math._
+import collection.immutable.IndexedSeq
 
 object MathVector {
-  def apply(one: Double, two: Double, three: Double) = {
-    new MathVector(Seq(one, two, three))
+  def apply(args: Double*) = {
+    new MathVector(args)
   }
 }
 
@@ -15,19 +16,18 @@ class MathVector(val content: Seq[Double]) {
 
   def +(other: MathVector)= {
     require(length == other.length, "length matches")
-//TODO beliebige Länge
-    new MathVector(Seq(content(0) + other.content(0), content(1) + other.content(1), content(2) + other.content(2)))
+    val seq: IndexedSeq[Double] = for (i <- 0 until length) yield content(i) + other.content(i)
+    new MathVector(seq)
   }
 
   def -(other: MathVector)= {
     require(length == other.length, "length matches")
-//TODO beliebige Länge
-    new MathVector(Seq(content(0) - other.content(0), content(1) - other.content(1), content(2) - other.content(2)))  
+    val seq: IndexedSeq[Double] = for (i <- 0 until length) yield content(i) - other.content(i)
+    new MathVector(seq)
   }
 
   def x(other: MathVector)= {
-    require(length == other.length, "length matches")
-//TODO beliebige Länge
+    require(length == other.length && length == 3, "length matches")
     val row1 = content(1) * other.content(2) - content(2) * other.content(1)
     val row2 = content(2) * other.content(0) - content(0) * other.content(2)
     val row3 = content(0) * other.content(1) - content(1) * other.content(0)
@@ -36,13 +36,11 @@ class MathVector(val content: Seq[Double]) {
 
   def *(other: MathVector)= {
     require(length == other.length, "length matches")
-    content(0) * other.content(0) + content(1) * other.content(1) + content(2) * other.content(2)
+    val seq: IndexedSeq[Double] = for (i <- 0 until length) yield content(i) * other.content(i)
+    seq.sum
   }
 
-  def *(other: Double) = {
-//TODO beliebige Länge
-    MathVector(content(0) * other, content(1) * other, content(2) * other)
-  }
+  def *(other: Double): MathVector = new MathVector(content.map(_ * other))
 
   override def equals(that: Any) = {
     that match {
