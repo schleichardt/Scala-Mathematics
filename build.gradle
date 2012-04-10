@@ -23,7 +23,3 @@ dependencies {
     runtime 'commons-lang:commons-lang:2.6'
     runtime 'commons-io:commons-io:2.1'
 }
-
-compileScala {
-    scalaCompileOptions.useCompileDaemon = true
-}

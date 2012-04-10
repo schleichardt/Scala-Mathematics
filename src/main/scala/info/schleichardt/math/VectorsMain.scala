@@ -7,5 +7,6 @@ object VectorsMain {
     println(rotatedVector)
     println(DTMatrix.calculateXCoordinateViewer(4.0, rotatedVector))
     println(DTMatrix.calculateYCoordinateViewer(4.0, rotatedVector))
+    println(new MathVector(Seq(0.5, 0, -.9)) x new MathVector(Seq(0, -.8, .6)))
   }
 }
