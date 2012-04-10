@@ -2,7 +2,7 @@ package info.schleichardt.math.exercises
 
 import info.schleichardt.math._
 
-object Tetraeder10042012Main {
+object Tetraeder03042012 {
   def main(args: Array[String]) {
     val dT = new DTMatrix().toConcreteMatrix(Angle.fromDegree(10), Angle.fromDegree(20))
     val rotatedVector: MathVector = dT * (new MathVector(Seq(-.5, -.2, -.3)))
