@@ -8,4 +8,4 @@ object Angle {
   def degreeToRadiant(degree: Double) = degree * Pi / 180
 }
 
-class Angle(val radiant: Double) {}
+case class Angle(val radiant: Double) {}
