@@ -47,3 +47,11 @@ class MathVector(val content: Seq[Double]) {
     }
   }
 }
+
+object MathVectorScalar {
+  implicit def implicitConversionDoubleToMath(double: Double) = MathVectorScalar(double)
+}
+
+case class MathVectorScalar(value: Double) {
+  def *(vector: MathVector) = vector * value
+}
