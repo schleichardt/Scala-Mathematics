@@ -1,5 +1,9 @@
 package info.schleichardt.math
 
+object ValueMatrix {
+  def apply(input: Seq[Double]*) = new ValueMatrix(input)
+}
+
 class ValueMatrix(val content: Seq[Seq[Double]]) {
   override def toString(): String = {
     val builder = new StringBuilder
@@ -25,5 +29,25 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
       result += zwischenErgebnis
     }
     new MathVector(result)
+  }
+
+  def +(other: ValueMatrix): ValueMatrix = {
+    require(content.length > 0)
+    require(content.length == other.content.length)
+    require(content(0).length == other.content(0).length)
+    val seq: Seq[Seq[Double]] =
+      for (line <- 0 until content.length) yield {
+        for (column <- 0 until content(0).length) yield {
+          (content(line)(column) + other.content(line)(column))
+        }
+      }
+    new ValueMatrix(seq)
+  }
+
+  override def equals(that: Any) = {
+    that match {
+      case other: ValueMatrix => content.equals(other.content)
+      case _ => false
+    }
   }
 }
