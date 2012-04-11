@@ -4,7 +4,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'info.schleichardt'
-version = '0.1-SNAPSHOT'
+version = '0.2-SNAPSHOT'
 
 
 project.ext.scalaVersion = '2.9.1'
