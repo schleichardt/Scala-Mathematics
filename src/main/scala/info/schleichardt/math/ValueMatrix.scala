@@ -38,7 +38,7 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
     val seq: Seq[Seq[Double]] =
       for (line <- 0 until content.length) yield {
         for (column <- 0 until content(0).length) yield {
-          (content(line)(column) + other.content(line)(column))
+          content(line)(column) + other.content(line)(column)
         }
       }
     new ValueMatrix(seq)
@@ -49,5 +49,13 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
       case other: ValueMatrix => content.equals(other.content)
       case _ => false
     }
+  }
+
+  lazy val transpose = {
+    val seq: Seq[Seq[Double]] =
+      for (column <- 0 until content(0).length) yield {
+        for (line <- 0 until content.length) yield content(line)(column)
+      }
+    new ValueMatrix(seq)
   }
 }

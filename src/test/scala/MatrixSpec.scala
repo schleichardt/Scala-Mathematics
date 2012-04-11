@@ -11,5 +11,10 @@ class MatrixSpec extends Specification with JUnit with ScalaTest {
       val second = ValueMatrix(Seq(0, 3, 5), Seq(2, 1, -1))
       first + second must_== ValueMatrix(Seq(1, 0, 7), Seq(3, 3, 6))
     }
+    "be transposed" in {
+      val matrix = ValueMatrix(Seq(1, -3, 2), Seq(1, 2, 7))
+      val transposedMatrix = matrix.transpose
+      transposedMatrix must_== ValueMatrix(Seq(1, 1), Seq(-3, 2), Seq(2, 7))
+    }
   }
 }
