@@ -4,9 +4,7 @@ import math._
 import collection.immutable.IndexedSeq
 
 object MathVector {
-  def apply(args: Double*) = {
-    new MathVector(args)
-  }
+  def apply(args: Double*) = new MathVector(args)
 }
 
 class MathVector(val content: Seq[Double]) {
