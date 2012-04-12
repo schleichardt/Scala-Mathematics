@@ -1,5 +1,8 @@
 package info.schleichardt.math
 
+import collection.{Seq, GenTraversableOnce}
+import collection.immutable.IndexedSeq
+
 object ValueMatrix {
   def apply(input: Seq[Double]*) = new ValueMatrix(input)
 }
@@ -55,6 +58,24 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
     val seq: Seq[Seq[Double]] =
       for (column <- 0 until content(0).length) yield {
         for (line <- 0 until content.length) yield content(line)(column)
+      }
+    new ValueMatrix(seq)
+  }
+
+  lazy val isNullMatrix: Boolean = {
+    val allInALine: Seq[Double] = content.flatMap(x => x)
+    allInALine.forall(_ == 0)
+  }
+
+  def *(other: ValueMatrix): ValueMatrix = {
+    require(columnCount == other.content.length, "length matches")
+    val seq: Seq[Seq[Double]] =
+      for (lineResult <- 0 until content.length) yield {
+        for (columnResult <- 0 until content(0).length) yield {
+          (for (column <- 0 until content(0).length) yield {
+            content(lineResult)(column) * other.content(column)(columnResult)
+          }).sum
+        }
       }
     new ValueMatrix(seq)
   }
