@@ -33,6 +33,11 @@ class MatrixSpec extends Specification with JUnit with ScalaTest {
       matrixWith3Rows * matrixWith2Rows must throwA[IllegalArgumentException]
       matrixWith2Rows * matrixWith3Rows must not(throwA[IllegalArgumentException])
     }
-
+    "can be a identity matrix" in {
+      val identityMatrix = ValueMatrix(Seq(1, 0, 0), Seq(0, 1, 0), Seq(0, 0, 1))
+      val notIdentityMatrix = ValueMatrix(Seq(1, 0, 0), Seq(0, 1, 0), Seq(0, 1, 0))
+      identityMatrix.isIdentityMatrix must be_==(true)
+      notIdentityMatrix.isIdentityMatrix must be_==(false)
+    }
   }
 }

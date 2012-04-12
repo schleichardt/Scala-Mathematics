@@ -5,6 +5,18 @@ import collection.immutable.IndexedSeq
 
 object ValueMatrix {
   def apply(input: Seq[Double]*) = new ValueMatrix(input)
+  def identityMatrixForSize(size: Int) = {
+    val seq: Seq[Seq[Double]] =
+      for (line <- 0 until size) yield {
+        for (column <- 0 until size) yield {
+          if (line == column)
+            1.0
+          else
+            0.0
+        }
+      }
+    new ValueMatrix(seq)
+  }
 }
 
 class ValueMatrix(val content: Seq[Seq[Double]]) {
@@ -79,4 +91,6 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
       }
     new ValueMatrix(seq)
   }
+
+  lazy val isIdentityMatrix: Boolean = columnCount == content.length && ValueMatrix.identityMatrixForSize(columnCount) == this
 }
