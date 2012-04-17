@@ -93,4 +93,30 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
   }
 
   lazy val isIdentityMatrix: Boolean = columnCount == content.length && ValueMatrix.identityMatrixForSize(columnCount) == this
+
+  def length = content.length
+
+  def inverse(): ValueMatrix = {
+    val workingCopy = for (i <- 0 to length) yield content(i).toArray
+
+    for(i <- 1 to length) {
+      for(j <- i to length) {
+        for(k <- 1 to i - 1) {
+          workingCopy(i)(j) = (workingCopy(i)(j)-   workingCopy(i)(k) * workingCopy(k)(j))
+        }
+      }
+      for(j <- i+1 to length) {
+        for(k <- 1 to i - 1) {
+          workingCopy(i)(j) = workingCopy(j)(i) - workingCopy(j)(k) * workingCopy(k)(i)
+        }
+        workingCopy(j)(i) = workingCopy(j)(i) / workingCopy(i)(i)
+      }
+
+    }
+      //http://de.wikipedia.org/wiki/Gau%C3%9Fsches_Eliminationsverfahren
+    val seq: Seq[Seq[Double]] = for (i <- 0 to length) yield workingCopy(i).toList
+    new ValueMatrix(seq)
+  }
+
+  private def apply(x:Int, y:Int): Double = content(x)(y)
 }

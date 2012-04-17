@@ -39,5 +39,8 @@ class MatrixSpec extends Specification with JUnit with ScalaTest {
       identityMatrix.isIdentityMatrix must be_==(true)
       notIdentityMatrix.isIdentityMatrix must be_==(false)
     }
+//    "can have sometimes an inverse matrix" in {
+//       be_==()
+//    }
   }
 }
