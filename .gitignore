@@ -3,6 +3,7 @@
 
 build
 tmp
+target
 
 #IntelliJ IDEA files
 *.iml
