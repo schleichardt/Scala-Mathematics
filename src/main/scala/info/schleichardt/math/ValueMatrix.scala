@@ -1,6 +1,8 @@
 package info.schleichardt.math
 
 import collection.immutable.IndexedSeq
+import info.schleichardt.math.ValueMatrix._
+import scala.Int
 import collection.{Seq, GenTraversableOnce}
 
 object ValueMatrix {
@@ -98,9 +100,26 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
 
 //  /** only works for matrices of dimension 2 and 3 */
 //  def inverse(): ValueMatrix = {
-//    require("inverse works only for matrices of dimension 2 or 3", length == 3 or length == 2
+//    require("works only for  matrices of dimension 2 or 3", length == 3 or length == 2)
+//
 //
 //  }
+
+  def isSquareMatrix(): Boolean = length == columnCount
+
+  def isSquareMatrixOfDimension(dimension: Int): Boolean = isSquareMatrix() && length == dimension
+
+/** only works for matrices of dimension 2 and 3 */
+  def determinant(): Double = {
+    require(isSquareMatrixOfDimension(3) || isSquareMatrixOfDimension(2), "works only for square matrices of dimension 2 or 3")
+    var result:Double = 0;
+    if (isSquareMatrixOfDimension(3)) {
+      result = content(0)(0) * content(1)(1) * content(2)(2) + content(0)(1) * content(1)(2) * content(2)(0) + content(0)(2) * content(1)(0) * content(2)(1) - content(0)(2) * content(1)(1) * content(2)(0) - content(0)(1) * content(1)(0) * content(2)(2) - content(0)(0) * content(1)(2) * content(2)(1)
+    } else if (isSquareMatrixOfDimension(2)) {
+      result = content(0)(0) *  content(1)(1) -  content(0)(1) *  content(1)(0)
+    }
+    result
+  }
 
   def *(other: Double): ValueMatrix = {
     val seq: Seq[Seq[Double]] = for (line <- 0 until content.length) yield {
