@@ -1,7 +1,7 @@
 package info.schleichardt.math
 
-import collection.{Seq, GenTraversableOnce}
 import collection.immutable.IndexedSeq
+import collection.{Seq, GenTraversableOnce}
 
 object ValueMatrix {
   def apply(input: Seq[Double]*) = new ValueMatrix(input)
@@ -96,25 +96,18 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
 
   def length = content.length
 
-  def inverse(): ValueMatrix = {
-    val workingCopy = for (i <- 0 to length) yield content(i).toArray
+//  /** only works for matrices of dimension 2 and 3 */
+//  def inverse(): ValueMatrix = {
+//    require("inverse works only for matrices of dimension 2 or 3", length == 3 or length == 2
+//
+//  }
 
-    for(i <- 1 to length) {
-      for(j <- i to length) {
-        for(k <- 1 to i - 1) {
-          workingCopy(i)(j) = (workingCopy(i)(j)-   workingCopy(i)(k) * workingCopy(k)(j))
-        }
+  def *(other: Double): ValueMatrix = {
+    val seq: Seq[Seq[Double]] = for (line <- 0 until content.length) yield {
+      for (column <- 0 until content(0).length) yield {
+        content(line)(column) * other
       }
-      for(j <- i+1 to length) {
-        for(k <- 1 to i - 1) {
-          workingCopy(i)(j) = workingCopy(j)(i) - workingCopy(j)(k) * workingCopy(k)(i)
-        }
-        workingCopy(j)(i) = workingCopy(j)(i) / workingCopy(i)(i)
-      }
-
     }
-      //http://de.wikipedia.org/wiki/Gau%C3%9Fsches_Eliminationsverfahren
-    val seq: Seq[Seq[Double]] = for (i <- 0 to length) yield workingCopy(i).toList
     new ValueMatrix(seq)
   }
 

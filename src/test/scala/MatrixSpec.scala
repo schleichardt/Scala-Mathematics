@@ -22,10 +22,13 @@ class MatrixSpec extends Specification with JUnit with ScalaTest {
       nullMatrix.isNullMatrix must be_==(true)
       notNullMatrix.isNullMatrix must be_==(false)
     }
-    "be multiplied" in {
+    "be multiplied with each other" in {
       val left = ValueMatrix(Seq(0, 1, 2), Seq(4, 2, 3), Seq(5, 3, 1))
       val right = ValueMatrix(Seq(3, 1, 1), Seq(1, 3, 1), Seq(4, 0, 2))
       left * right must be_==(ValueMatrix(Seq(9, 3, 5), Seq(26, 10, 12), Seq(22, 14, 10)))
+    }
+    "be multiplied with a number" in {
+      ValueMatrix(Seq(0, 1, 2), Seq(-4, 2, 3), Seq(5, 3, 1)) * 2.0 must be_==(ValueMatrix(Seq(0, 2, 4), Seq(-8, 4, 6), Seq(10, 6, 2)))
     }
     "only fitting matrices can be multiplied" in {
       val matrixWith3Rows = ValueMatrix(Seq(0, 1, 2), Seq(4, 2, 3), Seq(5, 3, 1))//3 rows, 3 columns
