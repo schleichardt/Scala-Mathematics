@@ -40,7 +40,8 @@ class MatrixSpec extends Specification with JUnit with ScalaTest {
       notIdentityMatrix.isIdentityMatrix must be_==(false)
     }
 //    "can have sometimes an inverse matrix" in {
-//       be_==()
+//      val matrix = ValueMatrix(Seq(4,-1,2), Seq(2,-8,2), Seq(-4,1,-1))
+//      matrix.inverse must be_==(ValueMatrix(Seq(-1.0/5, -1.0/30, -7.0/15), Seq(1.0/5,-2.0/15, 2.0/15), Seq(1.0, 0.0, 1.0)))
 //    }
   }
 }
