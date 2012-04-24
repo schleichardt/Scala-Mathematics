@@ -147,10 +147,7 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
 
   private def apply(x:Int, y:Int): Double = content(x)(y)
 
-  def mainDiagonalSum = {
-    println("diagonals " + diagonalElements + " this: " + this)
-    diagonalElements.sum
-  }
+  lazy val mainDiagonalSum = diagonalElements.sum
 
-  def diagonalElements: IndexedSeq[Double] = for (i <- 0 until length) yield content(i)(i)
+  lazy val diagonalElements: Seq[Double] = for (i <- 0 until length) yield content(i)(i)
 }
