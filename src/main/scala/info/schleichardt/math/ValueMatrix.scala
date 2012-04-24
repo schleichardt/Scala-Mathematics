@@ -2,8 +2,8 @@ package info.schleichardt.math
 
 import scala.collection.immutable.IndexedSeq
 import info.schleichardt.math.ValueMatrix._
-import scala.collection.{Seq, GenTraversableOnce}
 import scala._
+import collection.{Seq, GenTraversableOnce}
 
 object ValueMatrix {
   def apply(input: Seq[Double]*) = new ValueMatrix(input)
@@ -61,9 +61,13 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
     new ValueMatrix(seq)
   }
 
+  def -(other: ValueMatrix): ValueMatrix = {
+    this + (other * (-1))
+  }
+
   override def equals(that: Any) = {
     that match {
-      case other: ValueMatrix => content.equals(other.content)
+      case other: ValueMatrix => toString().equals(other.toString())
       case _ => false
     }
   }
@@ -98,12 +102,23 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
 
   def length = content.length
 
-//  /** only works for matrices of dimension 2 and 3 */
-//  def inverse(): ValueMatrix = {
-//    require("works only for  matrices of dimension 2 or 3", length == 3 or length == 2)
-//
-//
-//  }
+  /** only works for matrices of dimension 2 and 3 */
+  def inverse(): ValueMatrix = {
+    //http://de.wikipedia.org/wiki/Algorithmus_von_Faddejew-Leverrier
+    require(length == 3, "works only for  matrices of dimension 3")
+    val ckFunc = (matrix: ValueMatrix, k: Int) => matrix.mainDiagonalSum / k
+    val BkFunc = (matrix: ValueMatrix, ck: Double) => matrix - ValueMatrix.identityMatrixForSize(matrix.length) * ck
+    val A = this;
+    val A1 = this;
+    val c1 = ckFunc(A1, 1)
+    val B1 = BkFunc(A1, c1)
+    val A2 = A * B1
+    val c2 = ckFunc(A2, 2)
+    val B2 = BkFunc(A2, c2)
+    val A3 = A * B2
+    val c3: Double = ckFunc(A3, 3)
+    B2 * (1.0 / c3)
+  }
 
   def isSquareMatrix(): Boolean = length == columnCount
 
@@ -132,7 +147,10 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
 
   private def apply(x:Int, y:Int): Double = content(x)(y)
 
-  def mainDiagonalSum = diagonalElements.sum
+  def mainDiagonalSum = {
+    println("diagonals " + diagonalElements + " this: " + this)
+    diagonalElements.sum
+  }
 
   def diagonalElements: IndexedSeq[Double] = for (i <- 0 until length) yield content(i)(i)
 }
