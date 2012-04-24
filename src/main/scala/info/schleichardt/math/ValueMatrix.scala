@@ -3,6 +3,7 @@ package info.schleichardt.math
 import scala.collection.immutable.IndexedSeq
 import info.schleichardt.math.ValueMatrix._
 import scala._
+import collection.mutable.ListBuffer
 import collection.{Seq, GenTraversableOnce}
 
 object ValueMatrix {
@@ -102,22 +103,22 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
 
   def length = content.length
 
-  /** only works for matrices of dimension 2 and 3 */
   def inverse(): ValueMatrix = {
     //http://de.wikipedia.org/wiki/Algorithmus_von_Faddejew-Leverrier
-    require(length == 3, "works only for  matrices of dimension 3")
-    val ckFunc = (matrix: ValueMatrix, k: Int) => matrix.mainDiagonalSum / k
-    val BkFunc = (matrix: ValueMatrix, ck: Double) => matrix - ValueMatrix.identityMatrixForSize(matrix.length) * ck
-    val A = this;
-    val A1 = this;
-    val c1 = ckFunc(A1, 1)
-    val B1 = BkFunc(A1, c1)
-    val A2 = A * B1
-    val c2 = ckFunc(A2, 2)
-    val B2 = BkFunc(A2, c2)
-    val A3 = A * B2
-    val c3: Double = ckFunc(A3, 3)
-    B2 * (1.0 / c3)
+    val cs: ListBuffer[Double] = new ListBuffer()
+    val Bs: ListBuffer[ValueMatrix] = new ListBuffer()
+    val As: ListBuffer[ValueMatrix] = new ListBuffer()
+    As += this
+    for (i <- 0 until length){
+      val Ai: ValueMatrix = As(i)
+      val c = Ai.trace / (i + 1)
+      cs += c
+      val B = Ai - ValueMatrix.identityMatrixForSize(Ai.length) * c
+      Bs += B
+      val Anew = As(0) * B
+      As += Anew
+    }
+    Bs(length - 2) * (1.0 / cs(length - 1))
   }
 
   def isSquareMatrix(): Boolean = length == columnCount
@@ -147,7 +148,7 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
 
   private def apply(x:Int, y:Int): Double = content(x)(y)
 
-  lazy val mainDiagonalSum = diagonalElements.sum
+  lazy val trace = diagonalElements.sum
 
   lazy val diagonalElements: Seq[Double] = for (i <- 0 until length) yield content(i)(i)
 }
