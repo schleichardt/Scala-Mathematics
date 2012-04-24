@@ -1,9 +1,9 @@
 package info.schleichardt.math
 
-import collection.immutable.IndexedSeq
+import scala.collection.immutable.IndexedSeq
 import info.schleichardt.math.ValueMatrix._
-import scala.Int
-import collection.{Seq, GenTraversableOnce}
+import scala.collection.{Seq, GenTraversableOnce}
+import scala._
 
 object ValueMatrix {
   def apply(input: Seq[Double]*) = new ValueMatrix(input)
@@ -131,4 +131,8 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
   }
 
   private def apply(x:Int, y:Int): Double = content(x)(y)
+
+  def mainDiagonalSum = diagonalElements.sum
+
+  def diagonalElements: IndexedSeq[Double] = for (i <- 0 until length) yield content(i)(i)
 }

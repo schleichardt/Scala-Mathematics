@@ -46,6 +46,9 @@ class MatrixSpec extends Specification with JUnit with ScalaTest {
       ValueMatrix(Seq(0, 1, 2), Seq(3, 2, 1), Seq(1, 1, 0)).determinant must be_==(3.0)
       ValueMatrix(Seq(1, 2), Seq(4, 3)).determinant must be_==(-5.0)
     }
+    "hav a main diagonal sum if square matrix" in {
+      ValueMatrix(Seq(1, 1, 2), Seq(3, 50, 1), Seq(1, 0, 25)).mainDiagonalSum must be_==(1.0+50+25)
+    }
 //    "can have sometimes an inverse matrix" in {
 //      val matrix = ValueMatrix(Seq(4,-1,2), Seq(2,-8,2), Seq(-4,1,-1))
 //      matrix.inverse must be_==(ValueMatrix(Seq(-1.0/5, -1.0/30, -7.0/15), Seq(1.0/5,-2.0/15, 2.0/15), Seq(1.0, 0.0, 1.0)))
