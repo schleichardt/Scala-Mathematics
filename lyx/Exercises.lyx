@@ -77,10 +77,14 @@
 \begin_body
 
 \begin_layout Title
-Tetraederaufgabe
+Mathe
 \end_layout
 
 \begin_layout Section
+Tetraederaufgabe
+\end_layout
+
+\begin_layout Subsection
 Gegeben
 \end_layout
 
@@ -136,7 +140,7 @@ Beobachtungspunkt
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Gesucht
 \end_layout
 
@@ -176,7 +180,7 @@ Ist
  sichtbar?
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Lösungsweg
 \end_layout
 
@@ -191,7 +195,7 @@ Annahme: Bezugspunkt liegt im Koordinatenursprung:
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Bestimmung des Bildpunktes
 \end_layout
 
@@ -336,7 +340,7 @@ Somit ist
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Bestimmung der Normalen
 \end_layout
 
@@ -414,7 +418,7 @@ Test auf äußere Normale:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $(\underset{\text{da \ensuremath{S_{3}} interessant}}{\vec{p_{3}}}-\underset{\text{irgendein anderer Ortsvektor im Tetraeder}}{\vec{p_{0}}})\cdot\vec{n_{3}}=\begin{pmatrix}11\\
+\begin_inset Formula $(\underset{\text{da \ensuremath{S_{3}}interessant}}{\vec{p_{3}}}-\underset{\text{irgendein anderer Ortsvektor im Tetraeder}}{\vec{p_{0}}})\cdot\vec{n_{3}}=\begin{pmatrix}11\\
 9\\
 7
 \end{pmatrix}\cdot\begin{pmatrix}106\\
@@ -437,7 +441,7 @@ Die äußere Normale ist also
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Bestimmung der Sichtbarkeit
 \end_layout
 
@@ -507,6 +511,169 @@ Matrix bzw.
 \end_inset
 
  nicht sichtbar.
+\end_layout
+
+\begin_layout Section
+Eigenvektoraufgabe
+\end_layout
+
+\begin_layout Subsection
+Gegeben
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\begin{pmatrix}\begin{array}{rrr}
+-3 & 3 & 5\\
+-8 & 11 & 8\\
+6 & -9 & -4
+\end{array}\end{pmatrix}$
+\end_inset
+
+ mit Eigenwert 
+\begin_inset Formula $\lambda=-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Gesucht
+\end_layout
+
+\begin_layout Standard
+Eigenvektor 
+\begin_inset Formula $\vec{u}$
+\end_inset
+
+ mit 
+\begin_inset Formula $u_{1}=3$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $\vec{u}=\begin{pmatrix}3\\
+u_{2}\\
+u_{3}
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Lösung
+\end_layout
+
+\begin_layout Standard
+Es gibt zwei Unbekannte, daher wird ein Gleichungssystem mit mindestens
+ zwei Zeilen benötigt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+-3\cdot3+3\cdot u_{2}+5\cdot u_{3} & = & -1\cdot3\\
+-8\cdot3+11\cdot u_{2}+8\cdot u_{3} & = & -1\cdot u_{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zahlen ohne Unbekannte auf die rechte Seite.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+I:3u_{2}+5u_{3} & = & 6\\
+II:12u_{2}+8u_{3} & = & 24
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um 
+\begin_inset Formula $u_{3}$
+\end_inset
+
+zu erhalten wird 
+\begin_inset Formula $II-4\cdot I$
+\end_inset
+
+ berechnet:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $II-4\cdot I:-12u_{3}=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $u_{3}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ zu erhalten wird 
+\begin_inset Formula $u_{3}=0$
+\end_inset
+
+ in 
+\begin_inset Formula $I$
+\end_inset
+
+ eingesetzt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $3u_{2}+5\cdot0=6$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $3u_{2}=6$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $u_{2}=6:3=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\vec{u}=\begin{pmatrix}3\\
+2\\
+0
+\end{pmatrix}$
+\end_inset
+
+
 \end_layout
 
 \end_body
