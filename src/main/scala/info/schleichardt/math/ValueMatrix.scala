@@ -103,7 +103,7 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
 
   def length = content.length
 
-  def inverse(): ValueMatrix = {
+  def inverse: ValueMatrix = {
     //http://de.wikipedia.org/wiki/Algorithmus_von_Faddejew-Leverrier
     val cs: ListBuffer[Double] = new ListBuffer()
     val Bs: ListBuffer[ValueMatrix] = new ListBuffer()
@@ -121,9 +121,9 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
     Bs(length - 2) * (1.0 / cs(length - 1))
   }
 
-  def isSquareMatrix(): Boolean = length == columnCount
+  def isSquareMatrix = length == columnCount
 
-  def isSquareMatrixOfDimension(dimension: Int): Boolean = isSquareMatrix() && length == dimension
+  def isSquareMatrixOfDimension(dimension: Int): Boolean = isSquareMatrix && length == dimension
 
 /** only works for matrices of dimension 2 and 3 */
   def determinant(): Double = {
