@@ -6,6 +6,9 @@ import collection.Seq
 
 object ValueMatrix {
   def apply(input: Seq[Double]*) = new ValueMatrix(input)
+
+  def apply(a: Double*)(b: Double*)(c: Double*) = new ValueMatrix(Seq(a,b,c))
+
   def identityMatrixForSize(size: Int) = {
     val seq: Seq[Seq[Double]] =
       for (line <- 0 until size) yield {
