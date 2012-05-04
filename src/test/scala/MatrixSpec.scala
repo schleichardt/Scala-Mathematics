@@ -1,4 +1,4 @@
-import info.schleichardt.math.ValueMatrix
+import info.schleichardt.math.{TwoRowMatrix, ValueMatrix}
 import org.junit.runner.RunWith
 import org.specs.runner.{ScalaTest, JUnit, JUnitSuiteRunner}
 import org.specs.Specification
@@ -60,9 +60,8 @@ class MatrixSpec extends Specification with JUnit with ScalaTest {
       matrix.inverse must be_==(ValueMatrix(Seq(0.15, 0.65, -0.35), Seq(-0.20, -0.20, 0.30), Seq(0.15, -0.35, 0.15)))
     }
     "can be initialized without Seq" in {
-      val matrix1 = ValueMatrix(Seq(3.,1,5), Seq(3.,3,1), Seq(4.,6,4))
-      val matrix2 = ValueMatrix(3.0,1,5)(3,3,1)(4,6,4)
-      matrix1 must be_==(matrix2)
+      ValueMatrix(Seq(3., 1, 5), Seq(3., 3, 1), Seq(4., 6, 4)) must be_==(ValueMatrix(3.0, 1, 5)(3, 3, 1)(4, 6, 4))
+      ValueMatrix(Seq(3., 1), Seq(3., 3)) must be_==(TwoRowMatrix(3.0, 1)(3.0, 3))
     }
   }
 }

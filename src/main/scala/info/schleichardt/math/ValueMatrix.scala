@@ -23,6 +23,10 @@ object ValueMatrix {
   }
 }
 
+object TwoRowMatrix {
+  def apply(a: Double*)(b: Double*) = new ValueMatrix(Seq(a,b))
+}
+
 class ValueMatrix(val content: Seq[Seq[Double]]) {
   override def toString(): String = {
     val builder = new StringBuilder
