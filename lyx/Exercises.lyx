@@ -676,5 +676,366 @@ Um
 
 \end_layout
 
+\begin_layout Section
+Kreis zu Ellipse Aufgabe
+\end_layout
+
+\begin_layout Standard
+Durch die Tranformation 
+\begin_inset Formula $\vec{y}=A\vec{x}$
+\end_inset
+
+ mit 
+\begin_inset Formula $A=\begin{pmatrix}\begin{array}{rr}
+-2 & 1\\
+3 & 1
+\end{array}\end{pmatrix}$
+\end_inset
+
+ wird der Einheitskreis in eine Ellipse überführt.
+ 
+\end_layout
+
+\begin_layout Subsection
+Gegeben
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\begin{pmatrix}\begin{array}{rr}
+-2 & 1\\
+3 & 1
+\end{array}\end{pmatrix}$
+\end_inset
+
+ , 
+\begin_inset Formula $|\vec{x}|=1$
+\end_inset
+
+ da Einheitskreis
+\end_layout
+
+\begin_layout Subsection
+Gesucht
+\end_layout
+
+\begin_layout Standard
+Man bestimme für die Halbachsen [der Ellipse, anmerk.] die Länge 
+\begin_inset Formula $L$
+\end_inset
+
+ und die Winkel 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Lösung
+\end_layout
+
+\begin_layout Subsubsection
+Längen
+\end_layout
+
+\begin_layout Standard
+aus 
+\begin_inset Quotes eld
+\end_inset
+
+A3 Eigenvektoren.doc
+\begin_inset Quotes erd
+\end_inset
+
+, Seite 1 unten, wissen wir: 
+\end_layout
+
+\begin_layout Standard
+Die Längen der Ellipsen Halbachsen sind 
+\begin_inset Formula $L_{1}=\sqrt{\lambda_{min}}$
+\end_inset
+
+ und 
+\begin_inset Formula $L_{2}=\sqrt{\lambda_{max}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Des weiteren gilt: 
+\begin_inset Quotes eld
+\end_inset
+
+Die Eigenvektoren 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ zu den Eigenwerten 
+\begin_inset Formula $\lambda_{max}$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $\lambda_{min}$
+\end_inset
+
+ von 
+\begin_inset Formula $A^{T}A$
+\end_inset
+
+ sind die bei der Transformation A am stärksten verlängerten bzw.
+ verkürzten Vektoren.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B=A^{T}A=\begin{pmatrix}\begin{array}{rr}
+-2 & 3\\
+1 & 1
+\end{array}\end{pmatrix}\cdot\begin{pmatrix}\begin{array}{rr}
+-2 & 1\\
+3 & 1
+\end{array}\end{pmatrix}=\begin{pmatrix}\begin{array}{rr}
+13 & 1\\
+1 & 2
+\end{array}\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Miniprobe: B scheint nicht falsch zu sein, da es eine symmetrische Matrix
+ ist, wie in 
+\begin_inset Quotes eld
+\end_inset
+
+A3 Eigenvektoren.doc
+\begin_inset Quotes erd
+\end_inset
+
+ beschrieben.
+\end_layout
+
+\begin_layout Standard
+Aufstellung des Charakteristischen Polynoms für B:
+\family sans
+\series bold
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\family sans
+\series bold
+Strg+Enter in Formel erzeugt eqnarray umgebung für Satz untereinander
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $det(A)=det\left(\begin{pmatrix}\begin{array}{rr}
+a & b\\
+c & d
+\end{array}\end{pmatrix}\right)=ad-bc$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\chi_{B}(\lambda) & = & det(B-\lambda\mathbb{I})\\
+ & = & det\left(\begin{pmatrix}\begin{array}{rr}
+13 & 1\\
+1 & 2
+\end{array}\end{pmatrix}-\lambda\begin{pmatrix}\begin{array}{rr}
+1 & 0\\
+0 & 1
+\end{array}\end{pmatrix}\right)\\
+ & = & det\left(\begin{pmatrix}\begin{array}{rr}
+13-\lambda & 1\\
+1 & 2-\lambda
+\end{array}\end{pmatrix}\right)\\
+ & = & (13-\lambda)\cdot(2-\lambda)-1\cdot1\\
+ & = & \lambda^{2}-15\lambda+25
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit p-q-Formel: 
+\begin_inset Formula $\lambda_{1,2}=7,5\pm\sqrt{31,25}\Rightarrow\lambda_{1}\approx13,0902=\lambda_{max},\lambda_{2}\approx1,9098=\lambda_{min}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L_{1}=\sqrt{\lambda_{min}}=\sqrt{1,9098}\approx1,382$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+und 
+\begin_inset Formula $L_{2}=\sqrt{\lambda_{max}}=\sqrt{13,0902}\approx3,6180$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Winkel
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Warum so???
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha_{1}=\arctan\frac{v_{2}}{v_{1}}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{2}=90\text{°}-\alpha_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{v}=\begin{pmatrix}v_{1}\\
+v_{2}
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\cdot\vec{u}=\vec{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eigenwertgleichung: 
+\begin_inset Formula $B\cdot\vec{u}=\lambda\cdot\vec{u}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $B\cdot\begin{pmatrix}u_{1}\\
+u_{2}
+\end{pmatrix}=\begin{pmatrix}\begin{array}{rr}
+13 & 1\\
+1 & 2
+\end{array}\end{pmatrix}\cdot\begin{pmatrix}u_{1}\\
+u_{2}
+\end{pmatrix}=\lambda_{1}\cdot\begin{pmatrix}u_{1}\\
+u_{2}
+\end{pmatrix}=13,0902\cdot\begin{pmatrix}u_{1}\\
+u_{2}
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $13\cdot u_{1}+1\cdot u_{2}=13,0902\cdot u_{1}$
+\end_inset
+
+, da jedes Vielfache eines Eigenvektors wieder ein Eigenvektor ist, kann
+ eine Komponente definiert werden und die zweite hämngt von dieser ab.
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $u_{1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow13+u_{2}=13,0902\Rightarrow u_{2}=13,0902-13=0,0902$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\vec{u}=\begin{pmatrix}1\\
+0,0902
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{v}=A\cdot\vec{u}=\begin{pmatrix}\begin{array}{rr}
+-2 & 1\\
+3 & 1
+\end{array}\end{pmatrix}\cdot\begin{pmatrix}1\\
+0,0902
+\end{pmatrix}=\begin{pmatrix}-1,9098\\
+3,0902
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha_{1}=\arctan\frac{v_{2}}{v_{1}}=\arctan\frac{3,0902}{-1,9098}\approx-58,28\text{°}$
+\end_inset
+
+, kurze Haupttachse???
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha_{2}=90\text{°}-\alpha_{1}=31,72\text{°}$
+\end_inset
+
+, lange Hauptachse???
+\end_layout
+
 \end_body
 \end_document
