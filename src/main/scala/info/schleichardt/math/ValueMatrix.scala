@@ -1,10 +1,8 @@
 package info.schleichardt.math
 
-import scala.collection.immutable.IndexedSeq
-import info.schleichardt.math.ValueMatrix._
 import scala._
 import collection.mutable.ListBuffer
-import collection.{Seq, GenTraversableOnce}
+import collection.Seq
 
 object ValueMatrix {
   def apply(input: Seq[Double]*) = new ValueMatrix(input)
@@ -90,7 +88,7 @@ class ValueMatrix(val content: Seq[Seq[Double]]) {
     require(columnCount == other.content.length, "length matches")
     val seq: Seq[Seq[Double]] =
       for (lineResult <- 0 until content.length) yield {
-        for (columnResult <- 0 until content(0).length) yield {
+        for (columnResult <- 0 until other.columnCount) yield {
           (for (column <- 0 until content(0).length) yield {
             content(lineResult)(column) * other.content(column)(columnResult)
           }).sum
