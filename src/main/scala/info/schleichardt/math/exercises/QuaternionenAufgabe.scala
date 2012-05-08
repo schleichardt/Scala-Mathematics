@@ -1,12 +1,12 @@
 package info.schleichardt.math.exercises
 
-import info.schleichardt.math.MathVector
+import info.schleichardt.math.Quaternion
 
 
 object QuaternionenAufgabe {
   def main(args: Array[String]) {
-    val x = MathVector(2, 0, 3)
-    val y = MathVector(1, 3, 4)
-    println(x.x(y))
+    val p1: Quaternion = Quaternion(0.9063, 0.2353, 0.2143, 0.2804).x(Quaternion(0, 2, 3, 4))
+    val result = p1.x(Quaternion(0.9063, -0.2352, -0.2113, -0.2804))
+    println(p1)
   }
 }

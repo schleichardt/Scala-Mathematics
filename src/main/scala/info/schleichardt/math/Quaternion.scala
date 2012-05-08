@@ -1,6 +1,6 @@
 package info.schleichardt.math
 
-
+import scala.math.sqrt;
 
 object Quaternion {
    def apply(x0: Double, x1: Double, x2: Double, x3: Double) = new Quaternion(x0, MathVector(x1, x2,x3))
@@ -20,5 +20,17 @@ class Quaternion private(val x0: Double, val vector: MathVector) {
     }
   }
 
-  override def toString(): String = "(%.4f, %s,)".format(x0, vector)
+  def *(other: Double): Quaternion = Quaternion(other * x0, other * vector.x, other * vector.y, other * vector.z)
+
+  override def toString(): String = "(%.4f, %s)".format(x0, vector)
+
+  lazy val norm: Double = {
+    import info.schleichardt.math.MathVectorScalar.implicitConversionDoubleToMath
+    sqrt(x0.^(2) + vector.x.^(2) + vector.y.^(2) + vector.z.^(2))
+  };
+
+  lazy val inverse: Quaternion = {
+    import info.schleichardt.math.MathVectorScalar.implicitConversionDoubleToMath
+    new Quaternion(x0, vector * (-1.0)) * norm.^(-2)
+  }
 }
