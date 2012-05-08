@@ -27,7 +27,7 @@
 \paperfontsize default
 \spacing single
 \use_hyperref true
-\pdf_title "Tetraeder"
+\pdf_title "Mathematics IMI Master"
 \pdf_author "Michael Schleichardt"
 \pdf_keywords "Mathematik, Studiengang Internationale Medieninformatik"
 \pdf_bookmarks true
@@ -63,7 +63,7 @@
 \tocdepth 3
 \paragraph_separation skip
 \defskip smallskip
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -1038,7 +1038,7 @@ Sei
 \end_layout
 
 \begin_layout Section
-Drehung
+Drehung mittels Drehmatrix
 \end_layout
 
 \begin_layout Subsection
@@ -1065,6 +1065,26 @@ Gegeben
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Gesucht
+\end_layout
+
+\begin_layout Standard
+Der Vektor 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+, der entsteht, wenn 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ um 
+\begin_inset Formula $\theta$
+\end_inset
+
+ gedreht wird.
 \end_layout
 
 \begin_layout Subsection
