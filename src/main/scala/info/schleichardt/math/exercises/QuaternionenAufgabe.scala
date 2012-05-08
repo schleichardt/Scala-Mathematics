@@ -17,7 +17,13 @@ object QuaternionenAufgabe {
     val rotationQuaternion = RotationQuaternion(rotationAngle, phi, psi)
     println("rotationQuaternion " + rotationQuaternion)
     val vector = Quaternion(0, 2, 3, 4)
-    val xRotated = rotationQuaternion.x(vector).x(rotationQuaternion.inverse)
+    val inverse: Quaternion = rotationQuaternion.inverse
+    println("norm " + rotationQuaternion.norm)
+    println("inverse " + inverse)
+    val zwischenErgebnis: Quaternion = rotationQuaternion.x(vector)
+    println("zwischenErgebnis " + zwischenErgebnis)
+
+    val xRotated = zwischenErgebnis.x(inverse)
     println("rotiert: " + xRotated)
     /*
     MathVector(x, y, z) (0,5567, 0,5000, 0,6634)T

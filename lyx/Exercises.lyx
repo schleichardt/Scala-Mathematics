@@ -1038,6 +1038,12 @@ Sei
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Drehung-mittels-Drehmatrix"
+
+\end_inset
+
 Drehung mittels Drehmatrix
 \end_layout
 
@@ -1046,14 +1052,15 @@ Gegeben
 \end_layout
 
 \begin_layout Standard
+Breitengrad
 \begin_inset Formula $\varphi=30\text{°}$
 \end_inset
 
-, 
+, Längengrad 
 \begin_inset Formula $\psi=40\text{°}$
 \end_inset
 
-, 
+, Drehwinkel 
 \begin_inset Formula $\theta=50\text{°}$
 \end_inset
 
@@ -1199,6 +1206,218 @@ Drehmatrix
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Drehung mittels Quaternionen
+\end_layout
+
+\begin_layout Subsection
+Gegeben
+\end_layout
+
+\begin_layout Standard
+Breitengrad
+\begin_inset Formula $\varphi=30\text{°}$
+\end_inset
+
+, Längengrad 
+\begin_inset Formula $\psi=40\text{°}$
+\end_inset
+
+, Drehwinkel 
+\begin_inset Formula $\theta=50\text{°}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{x}=\begin{pmatrix}2\\
+3\\
+4
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Gesucht
+\end_layout
+
+\begin_layout Standard
+Der Vektor 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+, der entsteht, wenn 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ um 
+\begin_inset Formula $\theta$
+\end_inset
+
+ gedreht wird.
+\end_layout
+
+\begin_layout Subsection
+Lösung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{y}=\hat{g}\otimes\hat{x}\otimes\hat{g}^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Drehvektor, wenn um die z-Achse gedreht werden würde 
+\begin_inset Formula $\vec{v}=\begin{pmatrix}cos(\varphi)\cdot sin(\psi)\\
+sin(\varphi)\\
+cos(\varphi)\cdot cos(\psi)
+\end{pmatrix}\approx\begin{pmatrix}0,5567\\
+0,5\\
+0,6634
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Drehquaternium 
+\begin_inset Formula $\hat{g}=\begin{pmatrix}g_{0}\\
+g_{1}\\
+g_{2}\\
+g_{3}
+\end{pmatrix}=\begin{pmatrix}cos\left(\frac{\theta}{2}\right)\\
+sin\left(\frac{\theta}{2}\right)\cdot\vec{v}
+\end{pmatrix}=\begin{pmatrix}cos\left(\frac{50}{2}\right)\\
+sin\left(\frac{50}{2}\right)\cdot\begin{pmatrix}0,5567\\
+0,5\\
+0,6634
+\end{pmatrix}
+\end{pmatrix}\approx\begin{pmatrix}0,9063\\
+0,2353\\
+0,2113\\
+0,2804
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{g}^{-1}=|\hat{g}|^{-2}\cdot\begin{pmatrix}g_{0}\\
+-g_{1}\\
+-g_{2}\\
+-g_{3}
+\end{pmatrix}$
+\end_inset
+
+ //Das Drehquaternium hat immer die Norm 1, daher gilt: 
+\begin_inset Formula $|\hat{g}|=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{g}^{-1}=1\cdot\begin{pmatrix}g_{0}\\
+-g_{1}\\
+-g_{2}\\
+-g_{3}
+\end{pmatrix}\approx\begin{pmatrix}0,9063\\
+-0,2353\\
+-0,2113\\
+-0,2804
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{x}=\begin{pmatrix}0\\
+\vec{x}
+\end{pmatrix}=\begin{pmatrix}0\\
+2\\
+3\\
+4
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{y}=\hat{g}\otimes\hat{x}\otimes\hat{g}^{-1}=\begin{pmatrix}0,9063\\
+0,2353\\
+0,2113\\
+0,2804
+\end{pmatrix}\otimes\begin{pmatrix}0\\
+2\\
+3\\
+4
+\end{pmatrix}\otimes\begin{pmatrix}0,9063\\
+-0,2353\\
+-0,2113\\
+-0,2804
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quaternion Multiplikation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{a}\otimes\hat{b}=\begin{pmatrix}a_{0}b_{0}-(\vec{a},\vec{b})\\
+a_{0}\vec{b}+b_{0}\vec{a}+\vec{a}\times\vec{b}
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{y}=\begin{pmatrix}-2,2259\\
+1,8167\\
+2,3386\\
+3,9084
+\end{pmatrix}\otimes\begin{pmatrix}0,9063\\
+-0,2353\\
+-0,2113\\
+-0,2804
+\end{pmatrix}\approx\begin{pmatrix}0\\
+2,3404\\
+2,1798\\
+4,3326
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+=> 
+\begin_inset Formula $y=\begin{pmatrix}2,3404\\
+2,1798\\
+4,3326
+\end{pmatrix}$
+\end_inset
+
+.
+ Dies entspricht dem Ergebnis aus 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Drehung-mittels-Drehmatrix"
+
+\end_inset
+
+.
 \end_layout
 
 \end_body
