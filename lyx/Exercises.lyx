@@ -1037,5 +1037,149 @@ Sei
 , lange Hauptachse???
 \end_layout
 
+\begin_layout Section
+Drehung
+\end_layout
+
+\begin_layout Subsection
+Gegeben
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varphi=30\text{°}$
+\end_inset
+
+, 
+\begin_inset Formula $\psi=40\text{°}$
+\end_inset
+
+, 
+\begin_inset Formula $\theta=50\text{°}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{x}=\begin{pmatrix}2\\
+3\\
+4
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Lösung
+\end_layout
+
+\begin_layout Standard
+Aus 
+\begin_inset Quotes eld
+\end_inset
+
+A4 Abbildungen.doc
+\begin_inset Quotes erd
+\end_inset
+
+ kennen wir:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $W^{T}=\begin{pmatrix}cos(\psi) & -sin(\varphi)\cdot sin(\psi) & cos(\varphi)\cdot sin(\psi)\\
+0 & cos(\varphi) & sin(\varphi)\\
+-sin(\psi) & -sin(\varphi)\cdot cos(\psi) & cos(\varphi)\cdot cos(\psi)
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $W^{T}=\begin{pmatrix}0,7660 & -0,3214 & 0,5567\\
+0 & 0,8660 & 0,5\\
+-0,6428 & -0,3839 & 0,6634
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{x1}=W\vec{x}=...=\begin{pmatrix}-1,0392\\
+0,4232\\
+5,2670
+\end{pmatrix}$
+\end_inset
+
+ Der Vektor 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ nach Umstellung der Achsen, so dass wie um z-Achse gedreht werden kann.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{x2}=D_{50}\cdot\vec{x1}=D_{50}W\vec{x}=\begin{pmatrix}0,6428 & -0,7660 & 0\\
+0,7660 & 0,6428 & 0\\
+0 & 0 & 1
+\end{pmatrix}=\begin{pmatrix}-0,9922\\
+-0,5240\\
+5,2670
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ist der gedrehte 
+\begin_inset Formula $\vec{x1}$
+\end_inset
+
+ im transformierten Koordinatensystem.
+\end_layout
+
+\begin_layout Standard
+Nun wird noch mit 
+\begin_inset Formula $W$
+\end_inset
+
+ von links multiplipliziert um ins Alte Koordinatensystem zurückzukommen.
+\end_layout
+
+\begin_layout Standard
+Notiz: bei 
+\begin_inset Formula $\vec{x2}$
+\end_inset
+
+ stimmt z-Komponente mit 
+\begin_inset Formula $\vec{x1}$
+\end_inset
+
+ überein.
+\end_layout
+
+\begin_layout Standard
+Der gedrehte Vektor 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ ist: 
+\begin_inset Formula $\vec{y}=W^{T}\vec{x2}=W^{T}DW\vec{x}=\begin{pmatrix}2,3405\\
+2,1797\\
+4,3326
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Drehmatrix 
+\begin_inset Formula $G=W^{T}D_{\theta}W$
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
