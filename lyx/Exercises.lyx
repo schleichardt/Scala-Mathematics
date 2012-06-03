@@ -1427,5 +1427,364 @@ reference "sec:Drehung-mittels-Drehmatrix"
 .
 \end_layout
 
+\begin_layout Section
+Splines
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Punkte-für-Splines-Aufgabe"
+
+\end_inset
+
+Punkte für Splines-Aufgabe
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Gegeben
+\end_layout
+
+\begin_layout Standard
+Für die Tabelle 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Punkte-für-Splines-Aufgabe"
+
+\end_inset
+
+ hat das Spline Gleichungssystem unter den Randbedingungen 
+\begin_inset Formula $S''(2)=0$
+\end_inset
+
+ und 
+\begin_inset Formula $S''(12)=0$
+\end_inset
+
+ die Lösung 
+\begin_inset Formula $w_{1}=0,3333$
+\end_inset
+
+; 
+\begin_inset Formula $w_{2}=0,2002$
+\end_inset
+
+; 
+\begin_inset Formula $w_{4}=0,3357$
+\end_inset
+
+; 
+\begin_inset Formula $w_{6}=0,5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Gesucht
+\end_layout
+
+\begin_layout Standard
+Man berechne die restlichen 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ und ermittle 
+\begin_inset Formula $S(6,8)$
+\end_inset
+
+ und 
+\begin_inset Formula $S'(6,8)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Lösung
+\end_layout
+
+\begin_layout Standard
+Aus 
+\begin_inset Formula $x_{1}=2$
+\end_inset
+
+ und 
+\begin_inset Formula $x_{n}=x_{6}=12$
+\end_inset
+
+ und der Aufgabenstellung genannten Randbedingung folgt: 
+\begin_inset Formula $S''(x_{1})=0$
+\end_inset
+
+ und 
+\begin_inset Formula $S''(x_{n})=0$
+\end_inset
+
+.
+ Gemäß 
+\begin_inset Quotes gld
+\end_inset
+
+A8a Basisspline.doc
+\begin_inset Quotes grd
+\end_inset
+
+ Abschnitt Randbedingungen 1 folgt daraus:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{0}=2w_{1}-w_{2}\label{eq:randbed1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{n+1}=2w_{n}-w_{n-1}\label{eq:randbed2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{0}=2w_{1}-w_{2}=2\cdot0,3333-0,2002=0,4664$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus 
+\begin_inset Quotes gld
+\end_inset
+
+A8 Splines.doc
+\begin_inset Quotes grd
+\end_inset
+
+ wissen wir: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{i-1}+4w_{i}+w_{i+1}=y_{i}\label{eq:splinesGleichung}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+für 
+\begin_inset Formula $w_{3}$
+\end_inset
+
+ wird 
+\begin_inset Formula $i=3$
+\end_inset
+
+ gesetzt in
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:splinesGleichung"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \end_body
 \end_document
