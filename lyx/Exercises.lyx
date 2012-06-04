@@ -1682,6 +1682,14 @@ Man berechne die restlichen
 Lösung
 \end_layout
 
+\begin_layout Subsubsection
+Berechnung der fehlenden 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 Aus 
 \begin_inset Formula $x_{1}=2$
@@ -1783,6 +1791,176 @@ reference "eq:splinesGleichung"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $y_{3}$
+\end_inset
+
+ ist der 3.
+ y-Wert in der Tabelle, also 0.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+w_{2}+4w_{3}+w_{4} & = & y_{3}\\
+w_{3} & = & \frac{0-w_{2}-w_{4}}{4}\\
+w_{3} & = & \frac{0-0,2002-0,3357}{4}\\
+w_{3} & = & -0,1340
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+analog für 
+\begin_inset Formula $w_{5}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+w_{4}+4w_{5}+w_{6} & = & y_{5}\\
+w_{5} & = & \frac{y_{5}-w_{4}-w_{6}}{4}\\
+w_{5} & = & \frac{4-0,3357-0,5}{4}\\
+w_{5} & = & 0,7911
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+analog für 
+\begin_inset Formula $w_{7}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+w_{5}+4w_{6}+w_{7} & = & y_{7}\\
+w_{7} & = & 3-w_{5}-4w_{6}\\
+w_{7} & = & 3-0,7911-4\cdot0,5\\
+w_{7} & = & 0,2089
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Berechnung von 
+\begin_inset Formula $S(6,8)$
+\end_inset
+
+ und 
+\begin_inset Formula $S'(6,8)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus 
+\begin_inset Quotes gld
+\end_inset
+
+A8a Basisspline.doc
+\begin_inset Quotes grd
+\end_inset
+
+ wissen wir, dass 
+\begin_inset Formula $S(x)$
+\end_inset
+
+ nur vier Summanden hat:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S(x)=w_{k}\phi_{4}(\xi+1)+w_{k+1}\phi_{3}(\xi)+w_{k+2}\phi_{2}(\xi-1)+w_{k+3}\phi_{1}(\xi-2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $z=\frac{x-a}{h}$
+\end_inset
+
+; 
+\begin_inset Formula $k$
+\end_inset
+
+ ist der ganzzahlige Anteil und 
+\begin_inset Formula $\xi$
+\end_inset
+
+ der gebrochene Anteil.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $z=\frac{x-a}{h}=\frac{x-x_{1}}{h}=\frac{6,8-2}{2}=2,4$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $k=2$
+\end_inset
+
+; 
+\begin_inset Formula $\xi=0,4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S(6,8)=w_{2}\phi_{4}(0,4+1)+w_{3}\phi_{3}(0,4)+w_{4}\phi_{2}(0,4-1)+w_{5}\phi_{1}(0,4-2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S(6,8)=0,2002\phi(1,4)+(-0,1340)\phi(0,4)+0,3357\phi(-0,6)+0,7911\phi(-1,6)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S(6,8)=0,4960$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S'(6,8)=\frac{1}{h}+0,2002\phi'(1,4)+(-0,1340)\phi'(0,4)+0,3357\phi'(-0,6)+0,7911\phi'(-1,6)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S'(6,8)=0,5\cdot1,9431=0,9716$
+\end_inset
+
 
 \end_layout
 
