@@ -706,6 +706,10 @@ Um
 
 \end_layout
 
+\begin_layout Standard
+Probe: Werte in dritte Zeile einsetzen
+\end_layout
+
 \begin_layout Section
 Kreis zu Ellipse Aufgabe
 \end_layout
@@ -3327,6 +3331,107 @@ res2: Double = 1.4916432000000002
 
 \begin_layout Standard
 \begin_inset Formula $S'(5,6)=\frac{0,3939\cdot(-0,12)+1,2123\cdot(-3,84)+(-0,2525)\cdot(+2,04)+0,7576\cdot(1,92)}{2}=-1,8713$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Spiegelung
+\end_layout
+
+\begin_layout Standard
+Die Normale der Ebene E durch den Koordinatenurspung hat die Ortswinkel
+ 
+\begin_inset Formula $\phi=20\text{°}$
+\end_inset
+
+und 
+\begin_inset Formula $\psi=45\text{°}$
+\end_inset
+
+.
+ An E wird der Punkt 
+\begin_inset Formula $P=\begin{pmatrix}1\\
+-2\\
+1
+\end{pmatrix}$
+\end_inset
+
+ gespiegelt.
+ Man bestimme den Spiegelungspunkt Q und die Spiegelungsmatrix S.
+\end_layout
+
+\begin_layout Subsection
+Gegeben
+\end_layout
+
+\begin_layout Subsection
+Gesucht
+\end_layout
+
+\begin_layout Subsection
+Lösung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S=E-2N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N=n\cdot n^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n=\begin{pmatrix}cos(\phi)\cdot sin(\psi)\\
+sin(\phi)\\
+cos(\phi)\cdot cos(\psi)
+\end{pmatrix}=\begin{pmatrix}cos(20\text{°})\cdot sin(45\text{°})\\
+sin(20\text{°})\\
+cos(20\text{°})\cdot cos(45\text{°})
+\end{pmatrix}=\begin{pmatrix}0,6645\\
+0,3420\\
+0,6645
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N=\begin{pmatrix}0,4416 & 0,2273 & 0,4416\\
+0,2273 & 0,1170 & 0,2273\\
+0,4414 & 0,2273 & 0,4416
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S=E-2N=\begin{pmatrix}0,1168 & -0,4546 & -0,8832\\
+-0,4546 & 0,7660 & -0,4546\\
+-0,8832 & -0,4546 & 0,1168
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q=SP=S\begin{pmatrix}1\\
+-2\\
+1
+\end{pmatrix}=\begin{pmatrix}0,1428\\
+-2,4412\\
+0,1428
+\end{pmatrix}$
 \end_inset
 
 
