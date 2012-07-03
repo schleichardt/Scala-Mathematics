@@ -568,6 +568,36 @@ Lösung
 \end_layout
 
 \begin_layout Standard
+!!! Achtung 
+\begin_inset Formula $(A-\lambda E)=0$
+\end_inset
+
+ => nicht Originalmatrix verwenden
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A-\lambda E)=0$
+\end_inset
+
+ , da 
+\begin_inset Formula $\lambda=-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A+E)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+siehe Klausurvorbereitung
+\end_layout
+
+\begin_layout Standard
 Es gibt zwei Unbekannte, daher wird ein Gleichungssystem mit mindestens
  zwei Zeilen benötigt.
 \end_layout
