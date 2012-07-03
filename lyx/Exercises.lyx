@@ -427,11 +427,11 @@ Test auf äußere Normale:
 \end{pmatrix}=2888\Rightarrow\vec{n_{3}}$
 \end_inset
 
- ist innere Normale
+ ist innere Normale, warum????
 \end_layout
 
 \begin_layout Standard
-Die äußere Normale ist also
+Die äußere Normale ist also 
 \begin_inset Formula $\vec{n}_{3}^{*}=-1\cdot\vec{n_{3}}=\begin{pmatrix}-106\\
 -231\\
 -51
@@ -472,7 +472,7 @@ A1 Geometrie.doc
 
 , S.
  2, äquivalent zu 
-\begin_inset Formula $(\vec{n}_{3}^{*}\cdot\vec{g})<0$
+\begin_inset Formula $(\vec{n}_{3}^{*}\cdot\vec{g})>0$
 \end_inset
 
 .
@@ -490,6 +490,16 @@ A1 Geometrie.doc
 Matrix bzw.
  der 3.
  Spalte der D Matrix überein.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g=\begin{pmatrix}cos(\text{φ})sin(\text{ψ})\\
+sin(\text{φ})\\
+cos(\text{φ})cos(\text{ψ})
+\end{pmatrix}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
