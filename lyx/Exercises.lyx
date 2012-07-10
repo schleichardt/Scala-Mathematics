@@ -493,9 +493,9 @@ Matrix bzw.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $g=\begin{pmatrix}cos(\text{φ})sin(\text{ψ})\\
-sin(\text{φ})\\
-cos(\text{φ})cos(\text{ψ})
+\begin_inset Formula $g=\begin{pmatrix}cos(\varphi)sin(\psi)\\
+sin(\varphi)\\
+cos(\varphi)cos(\psi)
 \end{pmatrix}$
 \end_inset
 
@@ -1477,6 +1477,10 @@ Splines (1.
 \end_layout
 
 \begin_layout Standard
+todo !!!!!!!!!!!!!!!! welche Randbedingungen?
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
@@ -2015,10 +2019,14 @@ Splines (2.
 \end_layout
 
 \begin_layout Standard
+!!!!!!!!!!!!!!!!!!!!!!! welche ist das?
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -2330,6 +2338,10 @@ w_{7} & = & 2,8166
 
 \begin_layout Subsubsection
 Funktionswerte
+\end_layout
+
+\begin_layout Standard
+!!!!!!!!!!! wo kommt diese Gleichung her?
 \end_layout
 
 \begin_layout Standard
