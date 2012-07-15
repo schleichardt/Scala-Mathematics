@@ -3351,6 +3351,10 @@ res2: Double = 1.4916432000000002
 Spiegelung
 \end_layout
 
+\begin_layout Subsection
+Gegeben
+\end_layout
+
 \begin_layout Standard
 Die Normale der Ebene E durch den Koordinatenurspung hat die Ortswinkel
  
@@ -3370,19 +3374,23 @@ und
 \end_inset
 
  gespiegelt.
- Man bestimme den Spiegelungspunkt Q und die Spiegelungsmatrix S.
-\end_layout
-
-\begin_layout Subsection
-Gegeben
+ 
 \end_layout
 
 \begin_layout Subsection
 Gesucht
 \end_layout
 
+\begin_layout Standard
+Man bestimme den Spiegelungspunkt Q und die Spiegelungsmatrix S.
+\end_layout
+
 \begin_layout Subsection
 Lösung
+\end_layout
+
+\begin_layout Subsubsection*
+Spiegelungsmatrix S
 \end_layout
 
 \begin_layout Standard
@@ -3433,6 +3441,10 @@ cos(20\text{°})\cdot cos(45\text{°})
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection*
+Spiegelungspunkt Q
 \end_layout
 
 \begin_layout Standard
