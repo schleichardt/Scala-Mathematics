@@ -587,136 +587,121 @@ Lösung
 \end_layout
 
 \begin_layout Standard
-!!! Achtung 
-\begin_inset Formula $(A-\lambda E)=0$
+\begin_inset Formula $(A-\lambda E)\cdot\vec{u}=0$
 \end_inset
 
- => nicht Originalmatrix verwenden
+ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $(A-\lambda E)=0$
-\end_inset
-
- , da 
+mit Einsetzen von 
 \begin_inset Formula $\lambda=-1$
 \end_inset
 
-
+ folgt:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $(A+E)=0$
+\begin_inset Formula $(A+E)\cdot\vec{u}=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\begin{pmatrix}\begin{array}{rrr}
+-3 & 3 & 5\\
+-8 & 11 & 8\\
+6 & -9 & -4
+\end{array}\end{pmatrix}+\begin{pmatrix}1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{pmatrix}\right)\cdot\begin{pmatrix}3\\
+u_{2}\\
+u_{3}
+\end{pmatrix}=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{pmatrix}-2 & 3 & 5\\
+-8 & 12 & 8\\
+6 & -9 & -3
+\end{pmatrix}\cdot\begin{pmatrix}3\\
+u_{2}\\
+u_{3}
+\end{pmatrix}=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Gleichungssystem:
+\end_layout
+
+\begin_layout Standard
+I: 
+\begin_inset Formula $-8\cdot3+12u_{2}+8u_{3}=0$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-siehe Klausurvorbereitung
-\end_layout
-
-\begin_layout Standard
-Es gibt zwei Unbekannte, daher wird ein Gleichungssystem mit mindestens
- zwei Zeilen benötigt.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
--3\cdot3+3\cdot u_{2}+5\cdot u_{3} & = & -1\cdot3\\
--8\cdot3+11\cdot u_{2}+8\cdot u_{3} & = & -1\cdot u_{2}
-\end{eqnarray*}
-
+II: 
+\begin_inset Formula $6\cdot3-9u_{2}-3u_{3}=0$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Zahlen ohne Unbekannte auf die rechte Seite.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-I:3u_{2}+5u_{3} & = & 6\\
-II:12u_{2}+8u_{3} & = & 24
-\end{eqnarray*}
-
+\begin_inset Formula $III=I+\frac{4}{3}\cdot II$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Um 
+\begin_inset Formula $24-\frac{4}{3}\cdot18+0u_{2}+8u_{3}-\frac{4}{3}\cdot3u_{3}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{3}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $u_{3}$
 \end_inset
 
-zu erhalten wird 
-\begin_inset Formula $II-4\cdot I$
-\end_inset
-
- berechnet:
+in I einsetzen:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $II-4\cdot I:-12u_{3}=0$
-\end_inset
-
- 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\begin_inset Formula $u_{3}=0$
+\begin_inset Formula $-24+12u_{2}+8\cdot0=0$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Um 
-\begin_inset Formula $u_{2}$
-\end_inset
-
- zu erhalten wird 
-\begin_inset Formula $u_{3}=0$
-\end_inset
-
- in 
-\begin_inset Formula $I$
-\end_inset
-
- eingesetzt:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $3u_{2}+5\cdot0=6$
-\end_inset
-
- 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\begin_inset Formula $3u_{2}=6$
-\end_inset
-
- 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\begin_inset Formula $u_{2}=6:3=2$
+\begin_inset Formula $u_{2}=2$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\Rightarrow\vec{u}=\begin{pmatrix}3\\
+\begin_inset Formula $\vec{u}=\begin{pmatrix}3\\
 2\\
 0
 \end{pmatrix}$
