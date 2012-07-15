@@ -28,7 +28,6 @@
 \spacing single
 \use_hyperref true
 \pdf_title "Mathematics IMI Master"
-\pdf_author "Michael Schleichardt"
 \pdf_keywords "Mathematik, Studiengang Internationale Medieninformatik"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -3503,6 +3502,424 @@ Spiegelungspunkt Q
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+DCT
+\end_layout
+
+\begin_layout Subsection
+Aufgabe
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+k
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y_{k}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Datentabelle DCT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Man berechne die Koeffizienten 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ der diskreten Cosinus-Transformation (DCT) und bestimme den Wert von 
+\begin_inset Formula $g(t)=\frac{a_{0}}{2}+\sum_{k=1}^{4}a_{k}\cos(kt)$
+\end_inset
+
+ an der Stelle 
+\begin_inset Formula $t=115\text{°}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Lösung
+\end_layout
+
+\begin_layout Standard
+Es gibt 5 Werte in der Wertetabelle somit ist 
+\begin_inset Formula $N=5$
+\end_inset
+
+ und n ist im Bereich 0 bis 4.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{0}=\frac{2}{N}\sum_{n=0}^{N-1}f(t_{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{k}=\frac{2}{N}\sum_{n=0}^{N-1}f(t_{n})\cdot\cos(k\cdot t_{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Bestimmung von 
+\begin_inset Formula $t_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für Winkel im Bogenmaß gilt: 
+\begin_inset Formula $t_{n}=\frac{(2n+1)\cdot\pi}{2N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für Winkel im Gradmaß gilt: 
+\begin_inset Formula $t_{n}=\frac{(2n+1)\cdot180\text{°}}{2N}=\frac{360\text{°}\cdot n+180\text{° }}{10}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t_{0}=\frac{360\text{°}\cdot0+180\text{° }}{10}=18\text{°}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t_{1}=54\text{°}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t_{2}=90\text{°}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t_{3}=126\text{°}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t_{4}=162\text{°}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Bestimmung von 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ mit 
+\begin_inset Formula $t_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(t_{n})=y_{n}$
+\end_inset
+
+ siehe Tabelle.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{0}=\frac{2}{N}\sum_{n=0}^{N-1}f(t_{n})=\frac{2}{5}\left(3+2+3+4+4\right)=\frac{2}{5}\cdot16=6,4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{1}=\frac{2}{5}\left(3\cdot\cos(1\cdot\text{18°})+2\cdot\cos(1\cdot\text{54°})+3\cdot\cos(1\cdot\text{90°})+4\cdot\cos(1\cdot\text{126°})+4\cdot\cos(1\cdot\text{162°})\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{1}=-0,8507$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{2}=0,3236$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{3}=0,5257$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{4}=0,1236$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Berechnung 
+\begin_inset Formula $g(t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gleichung: siehe Aufgabenstellung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g(115\text{°})=\frac{6,4}{2}+\sum_{k=1}^{4}a_{k}\cos(k\cdot115\text{°})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g(115\text{°})=\frac{6,4}{2}+\left(-0,8507\cdot\cos(1\cdot115\text{°})+0,3236\cdot\cos(2\cdot115\text{°})+0,5257\cdot\cos(3\cdot115\text{°})+0,1236\cdot\cos(4\cdot115\text{°})\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g(115\text{°})=3,8378$
+\end_inset
+
+ 
 \end_layout
 
 \end_body
