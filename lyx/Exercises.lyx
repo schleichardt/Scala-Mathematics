@@ -80,6 +80,15 @@
 Mathe
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Tetraederaufgabe
 \end_layout
@@ -721,7 +730,7 @@ Probe: Werte in dritte Zeile einsetzen
 \end_layout
 
 \begin_layout Section
-Kreis zu Ellipse Aufgabe
+Transformation Einheitskreis zu Ellipse
 \end_layout
 
 \begin_layout Standard
@@ -925,6 +934,13 @@ c & d
 
 \begin_layout Standard
 mit p-q-Formel: 
+\begin_inset Formula $\lambda_{1,2}=-\frac{p}{2}\pm\sqrt{\frac{p^{2}}{4}-q}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\lambda_{1,2}=7,5\pm\sqrt{31,25}\Rightarrow\lambda_{1}\approx13,0902=\lambda_{max},\lambda_{2}\approx1,9098=\lambda_{min}$
 \end_inset
 
@@ -935,7 +951,7 @@ mit p-q-Formel:
 \begin_inset Formula $L_{1}=\sqrt{\lambda_{min}}=\sqrt{1,9098}\approx1,382$
 \end_inset
 
- 
+ (kurze Hauptachse, da kleineres L)
 \end_layout
 
 \begin_layout Standard
@@ -943,21 +959,11 @@ und
 \begin_inset Formula $L_{2}=\sqrt{\lambda_{max}}=\sqrt{13,0902}\approx3,6180$
 \end_inset
 
-
+ (lange Hauptachse)
 \end_layout
 
 \begin_layout Subsubsection
 Winkel
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Warum so???
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -974,21 +980,18 @@ Warum so???
 \begin_layout Standard
 \begin_inset Formula $\vec{v}=\begin{pmatrix}v_{1}\\
 v_{2}
-\end{pmatrix}$
+\end{pmatrix}=A\cdot\vec{u}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $A\cdot\vec{u}=\vec{v}$
+Bestimmung 
+\begin_inset Formula $\vec{u}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Eigenwertgleichung: 
+ Eigenwertgleichung: 
 \begin_inset Formula $B\cdot\vec{u}=\lambda\cdot\vec{u}$
 \end_inset
 
@@ -1026,7 +1029,8 @@ u_{2}
 \end_inset
 
 , da jedes Vielfache eines Eigenvektors wieder ein Eigenvektor ist, kann
- eine Komponente definiert werden und die zweite hämngt von dieser ab.
+ eine Komponente definiert werden und die zweite hängt von dieser ab.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1071,14 +1075,14 @@ Sei
 \begin_inset Formula $\alpha_{1}=\arctan\frac{v_{2}}{v_{1}}=\arctan\frac{3,0902}{-1,9098}\approx-58,28\text{°}$
 \end_inset
 
-, kurze Haupttachse???
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $\alpha_{2}=90\text{°}-\alpha_{1}=31,72\text{°}$
 \end_inset
 
-, lange Hauptachse???
+
 \end_layout
 
 \begin_layout Section
