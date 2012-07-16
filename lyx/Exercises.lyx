@@ -3922,5 +3922,193 @@ Gleichung: siehe Aufgabenstellung
  
 \end_layout
 
+\begin_layout Section
+Funktionalmatrix
+\end_layout
+
+\begin_layout Subsection
+Aufgabenstellung
+\end_layout
+
+\begin_layout Standard
+Für das Funktionspaar 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x,y)=4xy^{2}+x\text{²}\cdot exp(-x^{2}y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g(x,y)=4x^{2}y+y^{2}\cdot exp(-2xy^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+bestimme man die Funktionalmatrix an der Stelle (x,y)=(0,5|1,5).
+\end_layout
+
+\begin_layout Subsection
+Gesucht
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(0.5,1.5)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Lösung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(x,y)=\begin{pmatrix}\frac{\partial f}{\partial x} & \frac{\partial f}{\partial y}\\
+\frac{\partial g}{\partial x} & \frac{\partial g}{\partial y}
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Berechnung der Ableitungen
+\end_layout
+
+\begin_layout Standard
+Summenregel, Produktregel
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial f}{\partial x}=4y^{2}+exp(-x^{2}y)\cdot\frac{\partial}{\partial x}x^{2}+x^{2}\cdot\frac{\partial}{\partial x}exp(-x^{2}y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kettenregel
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial f}{\partial x}=4y^{2}+exp(-x^{2}y)\cdot2x+x^{2}\cdot(-2xy)\cdot exp(-x^{2}y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial f}{\partial x}=4y^{2}+2x\cdot exp(-x^{2}y)-2x^{3}y\cdot exp(-x^{2}y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underline{\frac{\partial f}{\partial x}=4y^{2}+2x\cdot exp(-x^{2}y)\cdot(1-x^{2}y)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial f}{\partial y}=8xy+x^{2}exp(-x^{2}y)\cdot(-x^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underline{\frac{\partial f}{\partial y}=8xy-x^{4}exp(-x^{2}y)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Summenregel, Kettenregel
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial g}{\partial x}=8xy-2y\text{²}\cdot y\text{²}\cdot exp(-2xy^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underline{\frac{\partial g}{\partial x}=8xy-2y\text{4}\cdot exp(-2xy^{2})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial g}{\partial y}=4x^{2}+exp(-2xy^{2})\cdot\frac{\partial}{\partial y}y^{2}+y^{2}\frac{\partial}{\partial y}exp(-2xy^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial g}{\partial y}=4x^{2}+exp(-2xy^{2})\cdot2y+y^{2}(-4xy)\cdot exp(-2xy^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underline{\frac{\partial g}{\partial y}=4x^{2}+exp(-2xy^{2})\cdot(2y-4xy^{3})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Berechnung der Werte
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial f}{\partial x}(0.5,1.5)=9,4296$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial f}{\partial y}(0.5,1.5)=5,9570$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial g}{\partial x}(0.5,1.5)=4,9328$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial g}{\partial y}(0.5,1.5)=0,6047$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underline{\underline{F(0.5,1.5)=\begin{pmatrix}9,4296 & 5,9570\\
+4,9328 & 0,6047
+\end{pmatrix}}}$
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
