@@ -714,7 +714,7 @@ Probe: Werte in dritte Zeile einsetzen
 \end_layout
 
 \begin_layout Section
-Transformation Einheitskreis zu Ellipse
+Transformation Einheitskreis zu Ellipse/Norm einer Matrix
 \end_layout
 
 \begin_layout Standard
@@ -883,7 +883,7 @@ Strg+Enter in Formel erzeugt eqnarray umgebung für Satz untereinander
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $det(A)=det\left(\begin{pmatrix}\begin{array}{rr}
+\begin_inset Formula $det(X)=det\left(\begin{pmatrix}\begin{array}{rr}
 a & b\\
 c & d
 \end{array}\end{pmatrix}\right)=ad-bc$
@@ -944,6 +944,19 @@ und
 \end_inset
 
  (lange Hauptachse)
+\end_layout
+
+\begin_layout Standard
+Hinweis: 
+\begin_inset Formula $L_{2}=L_{max}$
+\end_inset
+
+ ist die Norm von A, die maximale Verlängerung, die ein Vektor durch die
+ Transformation 
+\begin_inset Formula $\vec{y}=A\vec{x}$
+\end_inset
+
+ erfahren kann.
 \end_layout
 
 \begin_layout Subsubsection
