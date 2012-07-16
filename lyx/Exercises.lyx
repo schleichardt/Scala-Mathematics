@@ -76,7 +76,7 @@
 \begin_body
 
 \begin_layout Title
-Mathe
+Mathematics IMI Master
 \end_layout
 
 \begin_layout Standard
@@ -315,7 +315,7 @@ A1 Geometrie.doc
 \begin_inset Formula $\vec{a}$
 \end_inset
 
-in Gleichung für 
+ in Gleichung für 
 \begin_inset Formula $q_{x}$
 \end_inset
 
@@ -415,6 +415,23 @@ Das Kreuzprodukt dieser zwei Vektoren liefert entweder eine innere Normale
 \end{pmatrix}=\begin{pmatrix}106\\
 231\\
 51
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reminder Kreuzprodukt: 
+\begin_inset Formula $\begin{pmatrix}a_{1}\\
+a_{2}\\
+a_{3}
+\end{pmatrix}\times\begin{pmatrix}b_{1}\\
+b_{2}\\
+b_{3}
+\end{pmatrix}=\begin{pmatrix}a_{2}b_{3}-a_{3}b_{2}\\
+a_{3}b_{1}-a_{1}b_{3}\\
+a_{1}b_{2}-a_{2}b_{1}
 \end{pmatrix}$
 \end_inset
 
@@ -850,7 +867,10 @@ Die Eigenvektoren
 \end_layout
 
 \begin_layout Standard
-Miniprobe: B scheint nicht falsch zu sein, da es eine symmetrische Matrix
+Miniprobe: B scheint nicht falsch zu sein, da es eine 
+\emph on
+symmetrische Matrix
+\emph default
  ist, wie in 
 \begin_inset Quotes eld
 \end_inset
@@ -967,8 +987,14 @@ Winkel
 \begin_inset Formula $\alpha_{1}=\arctan\frac{v_{2}}{v_{1}}$
 \end_inset
 
-, 
-\begin_inset Formula $\alpha_{2}=90\text{°}-\alpha_{1}$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha_{2}=\begin{cases}
+\alpha_{1}>0 & -(90\text{°}-\alpha_{1})\\
+\alpha_{1}<0 & 90\text{°}+\alpha_{1}
+\end{cases}$
 \end_inset
 
 
@@ -1076,10 +1102,14 @@ Sei
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\alpha_{2}=90\text{°}-\alpha_{1}=31,72\text{°}$
+\begin_inset Formula $\alpha_{2}=90\text{°}+\alpha_{1}=31,72\text{°}$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Zu beachten: Die Vorzeichen der Winkel sind unterschiedlich.
 \end_layout
 
 \begin_layout Section
